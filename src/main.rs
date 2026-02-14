@@ -105,12 +105,7 @@ fn save_store(store: &TodoStore, path: &Path) {
     fs::write(path, data).expect("Failed to write store file");
 }
 
-fn add_todo(
-    store: &mut TodoStore,
-    title: String,
-    priority: Priority,
-    due: Option<String>,
-) -> u32 {
+fn add_todo(store: &mut TodoStore, title: String, priority: Priority, due: Option<String>) -> u32 {
     let id = store.next_id;
     store.next_id += 1;
     let todo = Todo {
