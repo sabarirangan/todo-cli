@@ -149,8 +149,8 @@ fn main() {
             }
 
             println!(
-                "{:<5} {:<6} {:<8} {:<12} {}",
-                "ID", "Done", "Priority", "Due", "Title"
+                "{:<5} {:<6} {:<8} {:<12} Title",
+                "ID", "Done", "Priority", "Due"
             );
             println!("{}", "-".repeat(60));
             for t in todos {
